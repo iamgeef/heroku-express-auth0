@@ -10,6 +10,7 @@ const path = require("path");
 const expressSession = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
+const MemoryStore = require('memorystore')(expressSession)
 
 require("dotenv").config();
 
@@ -28,7 +29,10 @@ const port = process.env.PORT || "8000";
 
 const session = {
   secret: process.env.SESSION_SECRET,
-  cookie: {},
+  cookie: { maxAge: 86400000 },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
   resave: false,
   saveUninitialized: false
 };
