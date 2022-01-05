@@ -1,7 +1,12 @@
+
+# Terraform 
+*.terraform*
+terraform*
+
 # Logs
 logs
 *.log
-npm-debug.log*
+npm-debug.l3og*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
