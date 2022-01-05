@@ -1,4 +1,4 @@
-# heroku-auth0-template
+# heroku-express-auth0
 
 This is a template for a Terraform configuration that deploys a basic expressJS web-app with auth0 authentication onto heroku.  
 The web-app is taken from the official auth0 blog post: https://auth0.com/blog/create-a-simple-and-secure-node-express-app/  
